@@ -32,7 +32,7 @@
                 <legend>Student details</legend>
                 <br>
                 <label for="studentID">Student ID</label>
-                <input type="text" id="studentID" name="studentID" pattern="^\d{7,10}$" required>
+                <input type="text" id="studentID" name="studentID" pattern="^\d{7,10}$" title="Please enter a student ID from 7 - 10 numbers" required>
                 <br><br>
                 <label for="GivenName">Student Name </label><input type="text" id="GivenName" name="GivenName" maxlength="15" pattern="^[A-Za-z\s]+$" required>
                 <label for="FamilyName"> Family Name </label><input type="text" id="FamilyName" name="FamilyName" maxlength="15" pattern="^[A-Za-z\s]+$" required>
@@ -42,16 +42,16 @@
             <fieldset>
                 <legend>Your unit</legend>
                 <br>
-                <label for="COS10011">
-                <input type="radio" id="COS10011" name="unit" value="COS10011" required="required"> COS 10011 &nbsp;
+                <label for="COS10026">
+                <input type="radio" id="COS10026" name="unit" value="COS10026" required="required"> COS 10026 &nbsp;
                 </label>
 
-                <label for="COS 60004">
-                <input type="radio" id="COS 60004" name="unit" value="COS 60004" required> COS 60004 &nbsp;
+                <label for="COS10009 ">
+                <input type="radio" id="COS 10009" name="unit" value="COS 10009" required> COS 10009 &nbsp;
                 </label>
 
-                <label for="COS 60007">
-                <input type="radio" id="COS 60007" name="unit" value="COS 60007" required> COS 60007 &nbsp;
+                <label for="COS 10004">
+                <input type="radio" id="COS 10004" name="unit" value="COS 10004" required> COS 10004 &nbsp;
                 </label>
                 <br><br>
                 <label for="tutor">Your Tutor</label>
@@ -96,10 +96,10 @@
             <fieldset>
                 <legend>Preferred Date/Time</legend>
                 <label for="date">Date</label>
-                <input type="date" id="date" name="date" placeholder="dd/mm/yyyy" pattern="\d{2}/\d{2}/\d{4}" required>
+                <input type="text" id="date" name="date" placeholder="dd/mm/yyyy" pattern="(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0,1,2])\/(19|20)\d{2}" required>
                 <br>
                 <label for="time">Time</label>
-                <input type="text" id="time" name="time" placeholder="00:00" pattern="\d{2}:\d{2}" required>
+                <input type="text" id="time" name="time" placeholder="00:00" pattern="([01]?[0-9]|2[0-3]):[0-5][0-9]" required>
                 <br>
             </fieldset>
 
