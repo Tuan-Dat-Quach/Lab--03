@@ -8,7 +8,104 @@
     <meta name="author" content="Tuan Dat Quach">
     <title>CWA Help Desk Appointment</title>
 </head>
-<body>
 
+<body>
+    <a href="https://www.swin.edu.au/" target="_blank">
+        <img src="logo.png" alt="The official logo of Swinburne University of Technology">
+    </a>
+    <br>
+    <main> 
+        <form action="submit.php" method="post">
+            <header>
+                <h1>CWA Help Desk Appointment</h1>
+            </header>
+
+            <section>
+                <p>
+                The Help Desk is located in ATC620. Open to 10:30 to 19:00 Monday to Friday
+                <br><br>
+                Check Blackboard for when CWA tutors will be there
+                </p>
+            </section>
+
+            <fieldset>
+                <legend>Student details</legend>
+                <br>
+                <label for="studentID">Student ID</label>
+                <input type="text" id="studentID" name="studentID" pattern="^\d{7,10}$" required>
+                <br><br>
+                <label for="GivenName">Student Name </label><input type="text" id="GivenName" name="GivenName" maxlength="15" pattern="^[A-Za-z\s]+$" required>
+                <label for="FamilyName"> Family Name </label><input type="text" id="FamilyName" name="FamilyName" maxlength="15" pattern="^[A-Za-z\s]+$" required>
+                <br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Your unit</legend>
+                <br>
+                <label for="COS10011">
+                <input type="radio" id="COS10011" name="unit" value="COS10011" required="required"> COS 10011 &nbsp;
+                </label>
+
+                <label for="COS 60004">
+                <input type="radio" id="COS 60004" name="unit" value="COS 60004" required> COS 60004 &nbsp;
+                </label>
+
+                <label for="COS 60007">
+                <input type="radio" id="COS 60007" name="unit" value="COS 60007" required> COS 60007 &nbsp;
+                </label>
+                <br><br>
+                <label for="tutor">Your Tutor</label>
+                <select id="tutor" name="tutor" required>
+                    <option value="">Please Select</option>
+                    <option value="Nick">Nick</option>
+                    <option value="Feixue Yan">Feixue Yan</option>
+                    <option value="Razeen Hashmi">Razeen Hashmi</option>
+                    <option value="Rahul Raghavan">Rahul Raghavan</option>
+                </select>
+                <br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Issue</legend>
+                <br>
+                <label for="HTML">
+                HTML <input type="checkbox" id="HTML" name="HTML" value="HTML" checked="checked">&nbsp;
+                </label>
+            
+                <label for="CSS">
+                CSS <input type="checkbox" id="CSS" name="CSS" value="CSS">&nbsp;
+                </label>
+            
+                <label for="JavaScript">
+                JavaScript <input type="checkbox" id="JavaScript" name="JavaScript" value="JavaScript">&nbsp;
+                </label>
+
+                <label for="PHP">
+                PHP <input type="checkbox" id="PHP" name="PHP" value="PHP">&nbsp;
+                </label>
+
+                <label for="MySQL">
+                MySQL <input type="checkbox" id="MySQL" name="MySQL" value="MySQL">&nbsp;
+                </label>
+                <br><br>
+                Description of Issue<br>
+                <textarea id="isdescript" name="isdescript" rows="4" cols="50" placeholder="Write description of your problem here..." required></textarea>
+                <br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferred Date/Time</legend>
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" placeholder="dd/mm/yyyy" pattern="\d{2}/\d{2}/\d{4}" required>
+                <br>
+                <label for="time">Time</label>
+                <input type="text" id="time" name="time" placeholder="00:00" pattern="\d{2}:\d{2}" required>
+                <br>
+            </fieldset>
+
+            <input type="submit" value="Book">
+            <input type="reset" value="Reset form">
+        </form>
+     </main>
 </body>
 </html>
